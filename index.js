@@ -1,20 +1,24 @@
 var img;
+var s = 5;
+var alpha = 255;
 function preload() {
   img = loadImage("bridge.jpg");
 }
 function setup() {
-	createCanvas(1041, 586)
-  	//image(img, 0, 0);
+	createCanvas(1041, 586);
 }
-var size = 100;
+
+function mousePressed(){
+	alpha = 255 - (255*(mouseX/width));
+	s = (100 * (mouseX/width)) + 5;
+}
+
 function draw() {
 	var x = random(width);
 	var y = random(height)
-	var c = img.get(x, y);
-	c[3] = 255 - (255*(mouseX/width));
-	//c[3] = 0;
-	size = (100 * (mouseX/width)) + 5;
+	c = img.get(x, y);
+	c[3] = alpha;
 	fill(c);
 	noStroke();
-  	ellipse(x, y, size, size);
+  	ellipse(x, y, s, s);
 }
