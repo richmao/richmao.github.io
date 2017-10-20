@@ -73,16 +73,36 @@ function myTileHeight(i, j) {
 function myTileVariation(i, j, height) {
     //console.log(height);
     if(height == 0.4){
-        return 3;
+        if(getClickCount(i,j)%2 == 1){
+            return 1;
+        }
+        else{
+            return 3;
+        }
     }
     else if(height < 0.9){
-        return 1;
+        if(getClickCount(i,j)%2 == 1){
+            return 2;
+        }
+        else{
+            return 1;
+        }
     }
     else if (height < 1.5){
-        return 2;
+        if(getClickCount(i,j)%2 == 1){
+            return 1;
+        }
+        else{
+            return 2;
+        }
     }
     else{
-        return 0;
+        if(getClickCount(i,j)%2 == 1){
+            return 2;
+        }
+        else{
+            return 0;
+        }
     }
 }
 
@@ -132,6 +152,7 @@ let clicks = {};
 
 function myHandleClick(i, j) {
     clicks[[i,j]] = 1 + (clicks[[i,j]]|0);
+
 }
 
 function getClickCount(i, j) {
