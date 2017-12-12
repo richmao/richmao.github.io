@@ -1,0 +1,203 @@
+/*css*/
+body{
+    width: 100%;
+}
+
+hr{
+    border-width: 1px;
+    border-color: #4a598c;
+    width:100%;
+}
+
+h4.title{
+    color: blue;
+    text-size: 200%;
+}
+
+h4.box{
+    color: white;
+    background-color: #7382b5;
+    height:1.5em;
+    padding-top: .2em;
+}
+
+h5.box{
+    /*color: white;*/
+    background-color: #7382b5;
+    height:1.4em;
+    padding-top: .25em;
+    padding-left:.2em;
+}
+
+h5.button{
+    background-color: #deebb5;
+    margin: 1em 1em 0em 1em;
+    height: 2em;
+    padding-top:.4em;
+    text-align: center;
+}
+
+p.link{
+    color:blue;
+    text-decoration: underline;
+}
+
+p.bigLink{
+    color:blue;
+    text-decoration: underline;
+    font-size:16px;
+    font-weight: bold;
+}
+
+p.linkDescriptor{
+    font-weight: bold;
+}
+
+p.ender{
+    font-weight: bold;
+    color: #4a598c;
+    text-align: right;
+}
+
+div.links{
+    line-height: 50%;
+}
+
+div.vertSpacer{
+    height:2em;
+}
+
+div#dropdown{
+    border-style: solid;
+    height:1.7em;
+}
+
+div.border{
+    border-style: solid;
+    height:4em;
+}
+
+img.arrow2{
+    padding-top:.4em;
+    padding-left:0.7em;
+}
+
+table.schedule{
+    border: solid;
+    width: 100%;
+}
+
+table.notSchedule{
+    border: solid;
+    border-color: #d3dce8;
+    width: 100%;
+}
+
+table.box{
+    border: solid;
+}
+
+tr.schedule{
+    border: solid;
+}
+
+tr.box{
+}
+
+tr.boxHolder{
+    border: solid;
+}
+
+th.schedule{
+    border: solid;
+    color: #7382b5;
+    font-weight: normal;
+    text-decoration: underline;
+    text-align: center;
+}
+
+th.notSchedule{
+    border: solid;
+    font-weight: bold;
+    color: #5a9dcf;
+    background-color: #d3dce8;
+    border-color: #d3dce8;
+}
+
+th.box{
+    color: white;
+    background-color: #7382b5;
+    height:1.4em;
+    padding-top: .25em;
+    padding-left:.2em;
+}
+
+td.schedule{
+    border:solid;
+}
+
+td.vertSpacer{
+    height:3em;
+}
+
+td.descriptor{
+    font-weight: bold;
+}
+
+td.link{
+    color:blue;
+    text-decoration: underline;
+}
+
+td.box{
+    background-color: #d6dfef;
+    padding-top: .4em;
+    padding-left: .4em;
+    padding-bottom: .2em;
+}
+
+td.boxLink{
+    color:blue;
+    text-decoration: underline;
+    background-color: #d6dfef;
+    padding-top: .4em;
+    padding-left: .4em;
+    padding-bottom: .2em;
+}
+
+td.boxSpacer{
+    height:1em;
+    background-color: #d6dfef;
+}
+
+td.boxEnder{
+    background-color: #d6dfef;
+    font-weight: bold;
+    color: #4a598c;
+}
+
+td.boxDescriptor{
+    font-weight: bold;
+    background-color: #d6dfef;
+    color: #4a598c;
+    padding-top: .4em;
+    padding-left: .4em;
+    padding-bottom: .2em;
+}
+
+/*https://www.w3schools.com/howto/howto_js_navbar_sticky.asp*/
+.sticky {
+  position: fixed;
+  top: 0;
+  /*width: 100%;*/
+  z-index:1;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.content {
+  padding: 20px;
+}
