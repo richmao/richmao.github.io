@@ -147,31 +147,41 @@ function randomSize() {
 }
 
 function resetButtons() {
-    let numButtons = 0;
+    
+    let numButtons = {};
+    //Remove existing buttons
     for (let i = 0; i < buttonIDs.length; i++) {
-        //Remove existing buttons
         let buttons = $("[id=" + buttonIDs[i] + "]");
         for (let j = 0; j < buttons.length; j++) {
             buttons.remove();
         }
-        //Create new buttons
-        if (document.getElementById(sectionIDs[i]) != null) {
-            let elements = $("[id=" + sectionIDs[i] + "]");
-            numButtons += elements.length;
-            for (let j = 0; j < elements.length; j++) {
-                if (j == 0) {
-                    $('#buttons').append('<button id="' + buttonIDs[i] + '">' + buttonText[i] + '</button>');
+        numButtons[sectionIDs[i]] = 0;
+    }
+
+    let children = $("#contentRow *");
+    
+    for(let i=0; i < children.length; i++){
+        
+        for(let j=0; j < sectionIDs.length; j++){
+        
+            if (children[i].id == sectionIDs[j]) {
+                let elements = $("[id=" + sectionIDs[j] + "]");
+                
+                if (numButtons[sectionIDs[j]] == 0) {
+                    $('#buttons').append('<button id="' + buttonIDs[j] + '">' + buttonText[j] + '</button>');
                 } else {
-                    let displayedNum = j + 1;
-                    $('#buttons').append('<button id="' + buttonIDs[i] + '">' + buttonText[i] + ' ' + displayedNum + '</button>');
+                    let displayedNum = numButtons[sectionIDs[j]] + 1;
+                    $('#buttons').append('<button id="' + buttonIDs[j] + '">' + buttonText[j] + ' ' + displayedNum + '</button>');
                 }
-                let buttonsOfType = $('[id="' + buttonIDs[i] + '"]');
-                let newClassName = markSection(sectionIDs[i], j);
-                buttonsOfType[j].addEventListener("click", function () {
+                let buttonsOfType = $('[id="' + buttonIDs[j] + '"]');
+                let newClassName = markSection(sectionIDs[j], buttonsOfType.length-1);
+                buttonsOfType[buttonsOfType.length-1].addEventListener("click", function () {
                     htmlRedoSection(newClassName);
                     cssRedo(newClassName);
                 });
+                numButtons[sectionIDs[j]]++;
             }
+    
         }
     }
 }
