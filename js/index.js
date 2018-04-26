@@ -35,6 +35,8 @@ function toggleFunction() {
     img.onload = function () {
         img.removeAttribute('data-src');
     };
+    console.log("Done");
+    
 });
     
     
