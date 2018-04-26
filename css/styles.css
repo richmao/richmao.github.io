@@ -55,15 +55,6 @@
         cursor: pointer;
     }
 
-    img {
-        opacity: 1;
-        transition: opacity 0.3s;
-    }
-
-    img[data-src] {
-        opacity: 0;
-    }
-
     /* Turn off parallax scrolling for tablets and phones */
 
     @media only screen and (max-device-width: 1024px) {
