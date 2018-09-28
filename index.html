@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <img style="display: none;" src="img/parallax.jpg" alt="">
+    <img style="display: none;" src="img/parallax.jpf" alt="">
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar" id="myNavbar">
@@ -31,7 +31,10 @@
                 title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
             </a>
-            <a href="#home" class="w3-bar-item w3-button">HOME</a>
+            <!-- <a href="#home" class="w3-bar-item w3-button">HOME</a> -->
+            <a href=#home" class="w3-bar-item w3-button w3-hide-small">
+                <img src="img/logo.jpf" class="w3-image" alt="Logo">
+            </a>
             <a href="#about" class="w3-bar-item w3-button w3-hide-small">
                 <i class="fa fa-user"></i> ABOUT</a>
             <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">
@@ -49,17 +52,22 @@
     <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">RICHARD MAO</span>
+            <div class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">
+                <span>RICHARD MAO</span>
+            </div>
+            <div class="w3-center w3-padding-large w3-medium w3-wide w3-black">
+                <span style="font-style: italic">Software Engineer</span>
+            </div>
         </div>
     </div>
 
     <!-- Container (About Section) -->
-    <div class="w3-grey w3-container w3-padding-64" id="about">
+    <div class="w3-sand w3-container w3-padding-64" id="about">
         <h2 class="w3-center">ABOUT ME</h2>
         <div class="w3-row">
             <div class="w3-col m6 w3-center w3-padding-large">
                 <br>
-                <img src="img/richard.jpg" class="w3-round w3-image" alt="Photo of Me" width="300"
+                <img src="img/richard.jpf" class="w3-circle w3-image" alt="Photo of Me" width="300"
                     height="333">
             </div>
 
@@ -68,11 +76,11 @@
                     Hi! I'm currently a senior at the University of California, Santa Cruz pursuing a Bachelor's Degree of Science in Computer
                     Science: Computer Game Design with an expected graduation date of December 2018. I have a particular
                     interest in game development, full stack web development, and artificial intelligence.
-                    <br>This past school year, I worked on my senior capstone game, Kleptonaut, as Lead Producer and Programmer. Kleptonaut won
+                    <br>Last year, I worked on my senior capstone game, Kleptonaut, as Lead Producer and Programmer. Kleptonaut won
                     the Grand Prize at the 2018 Sammy Showcase, an event showcasing all ~26 senior games made at UC Santa Cruz.
-                    Along with my capstone, I also explored AI in a Natural Language Processing class, where I built a QA Engine to answer
-                    simple factoid questions. This summer, I am working at Amazon as a Software Development Engineer Intern for the Prime Content
-                    Management Experience team. As a soon-to-be graduate, I am looking for any entry level opportunities available starting in 2019.
+                     This past summer, I am worked at Amazon as a Software Development Engineer Intern for the Prime Content
+                    Management Experience team developing a metrics logging system and a tool to generate custom reports. As a soon-to-be graduate in Decemeber,
+                    I am looking for any entry level opportunities available starting in 2019.
                 </p>
                 <div class="w3-center w3-padding-16">
                     <a href="https://github.com/richmao" class="icon-link">
@@ -146,41 +154,45 @@
         <br>
 
         <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-        <h4 class="w3-center  w3-padding-32">Current Project</h4>
+        <!-- <h4 class="w3-center  w3-padding-32">Current Project</h4>
         <div class="w3-row-padding w3-center">
-            <img src="img/klepto.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Kleptonaut is a top-down action puzzle game built in Unity3D made for the year long senior capstone. Roles: Lead Producer, Developer<br><a href='http://www.kleptonautgame.com'>Website</a>">
-        </div>
+            <img src="img/klepto.jpf" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Kleptonaut is a top-down action puzzle game built in Unity3D made for the year long senior capstone. Roles: Lead Producer, Developer<br><a href='http://www.kleptonautgame.com'>Website</a>">
+        </div> -->
         <h4 class="w3-center  w3-padding-32">Previous Projects</h4>
         <div class="w3-row-padding w3-center">
             <div class="w3-col m4">
-                <img src="img/pcgterrain.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PCGTerrain is a terrain generator that uses Perlin Noise and the xxHash hashing algorithm to create the geography of a pseudo-realistic infinite world.<br><a href='PCGTerrain/'>Website</a>">
+                <img src="img/klepto.jpf" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Kleptonaut is a top-down action puzzle game built in Unity3D made for the year long senior capstone. Roles: Lead Producer, Developer<br><a href='http://www.kleptonautgame.com'>Website</a>">
+            </div>
+            <div class="w3-col m4">
+                <img src="img/pcgterrain.jpf" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PCGTerrain is a terrain generator that uses Perlin Noise and the xxHash hashing algorithm to create the geography of a pseudo-realistic infinite world.<br><a href='PCGTerrain/'>Website</a>">
             </div>
 
             <div class="w3-col m4">
-                <img src="img/privacyprotector.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Privacy Protector is a 2D survival arcade game where you play as your mouse protecting your computer from viruses. Role: Lead Developer<br><a href='https://seshelle.itch.io/privacy-protector'>Website</a>">
+                <img src="img/privacyprotector.jpf" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Privacy Protector is a 2D survival arcade game where you play as your mouse protecting your computer from viruses. Role: Lead Developer<br><a href='https://seshelle.itch.io/privacy-protector'>Website</a>">
             </div>
-
+        </div>
+        <div class="w3-row-padding w3-center">
             <div class="w3-col m4">
-                <img src="img/pcgwebsite.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PCGWebsite is an experimental front-end procedural website generator using Tracery.js grammars and Bootstrap/JQuery. Role: Developer<br><a href='PCGWebsite/'>Website</a>">
+                <img src="img/pcgwebsite.jpf" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PCGWebsite is an experimental front-end procedural website generator using Tracery.js grammars and Bootstrap/JQuery. Role: Developer<br><a href='PCGWebsite/'>Website</a>">
             </div>
         </div>
 
 
         <!--<div class="w3-row-padding w3-center w3-section">
             <div class="w3-col m3">
-                <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+                <img src="/w3images/p5.jpf" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
             </div>
 
             <div class="w3-col m3">
-                <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+                <img src="/w3images/p6.jpf" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
             </div>
 
             <div class="w3-col m3">
-                <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+                <img src="/w3images/p7.jpf" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
             </div>
 
             <div class="w3-col m3">
-                <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+                <img src="/w3images/p8.jpf" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
             </div>
             <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
         </div>-->
@@ -198,8 +210,8 @@
     </div>
 
     <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-        <a href="#home" class="w3-button w3-light-grey">
+    <footer class="w3-center w3-sand w3-padding-64">
+        <a href="#home" class="w3-button w3-black w3-text-sand">
             <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <div class="w3-xlarge w3-section">
             <a href="https://github.com/richmao" class="icon-link">

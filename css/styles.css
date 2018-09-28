@@ -11,7 +11,7 @@
     body,
     html {
         height: 100%;
-        color: #777;
+        color: #484861;
         line-height: 1.8;
     }
 
@@ -29,7 +29,7 @@
     /* First image (Logo. Full height) */
 
     .bgimg-1 {
-        background-image: url('../img/parallax.jpg');
+        background-image: url('../img/parallax.jpf');
         min-height: 100%;
     }
 
