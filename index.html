@@ -17,13 +17,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/index.js"></script>
 </head>
 
 <body>
-    <img style="display: none;" src="img/parallax.jpg" alt="">
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar" id="myNavbar">
@@ -31,12 +31,15 @@
                 title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
             </a>
-            <!-- <a href="#home" class="w3-bar-item w3-button">HOME</a> -->
-            <a href=#home" class="w3-bar-item w3-button w3-hide-small">
+            <a href="#home" class="w3-bar-item w3-button">
                 <img src="img/logo.jpg" class="w3-image" alt="Logo">
             </a>
             <a href="#about" class="w3-bar-item w3-button w3-hide-small">
                 <i class="fa fa-user"></i> ABOUT</a>
+            <a href="#experience" class="w3-bar-item w3-button w3-hide-small">
+                    <i class="fa fa-suitcase"></i> EXPERIENCE</a>
+            <a href="#skills" class="w3-bar-item w3-button w3-hide-small">
+                <i class="fa fa-trophy"></i> SKILLS & AWARDS</a>
             <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">
                 <i class="fa fa-th"></i> PROJECTS</a>
             </a>
@@ -45,135 +48,243 @@
         <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
             <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="#experience" class="w3-bar-item w3-button" onclick="toggleFunction()">EXPERIENCE</a>
+            <a href="#skills" class="w3-bar-item w3-button" onclick="toggleFunction()">SKILLS & AWARDS</a>
             <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PROJECTS</a>
         </div>
     </div>
 
     <!-- First Parallax Image with Logo Text -->
-    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="bgimg-1 w3-display-container w3-opacity-min w3-card-4" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
             <div class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">
                 <span>RICHARD MAO</span>
             </div>
-            <div class="w3-center w3-padding-large w3-medium w3-wide w3-black">
-                <span style="font-style: italic">Software Engineer</span>
+            <div class="w3-center w3-padding-large w3-small w3-black">
+                <span style="font-style: italic; letter-spacing: 2px;">Software Engineer, Game Designer, Student</span>
             </div>
         </div>
     </div>
 
     <!-- Container (About Section) -->
-    <div class="w3-sand w3-container w3-padding-64" id="about">
+    <div class="w3-sand w3-padding-64 w3-card" id="about">
         <h2 class="w3-center">ABOUT ME</h2>
-        <div class="w3-row">
-            <div class="w3-col m6 w3-center w3-padding-large">
-                <br>
-                <img src="img/richard.jpg" class="w3-circle w3-image" alt="Photo of Me" width="300"
-                    height="333">
-            </div>
-
-            <div class="w3-col m6 w3-padding-large">
-                <p>
-                    Hi! I'm currently a senior at the University of California, Santa Cruz pursuing a Bachelor's Degree of Science in Computer
-                    Science: Computer Game Design with an expected graduation date of December 2018. I have a particular
-                    interest in game development, full stack web development, and artificial intelligence.
-                    <br>Last year, I worked on my senior capstone game, Kleptonaut, as Lead Producer and Programmer. Kleptonaut won
-                    the Grand Prize at the 2018 Sammy Showcase, an event showcasing all ~26 senior games made at UC Santa Cruz.
-                     This past summer, I am worked at Amazon as a Software Development Engineer Intern for the Prime Content
-                    Management Experience team developing a metrics logging system and a tool to generate custom reports. As a soon-to-be graduate in Decemeber,
-                    I am looking for any entry level opportunities available starting in 2019.
-                </p>
-                <div class="w3-center w3-padding-16">
-                    <a href="https://github.com/richmao" class="icon-link">
-                        <i style="font-size: 48px" class="fa fa-github fa-2x w3-hover-opacity w3-row-padding"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/richmao" class="icon-link">
-                        <i style="font-size: 48px" class="fa fa-linkedin fa-2x w3-hover-opacity w3-row-padding"></i>
-                    </a>
-                    <a href="https://twitter.com/richmaoo" class="icon-link">
-                        <i style="font-size: 48px" class="fa fa-twitter  fa-2x w3-hover-opacity w3-row-padding"></i>
-                    </a>
-                    <a href="http://bit.ly/2y6SLAD" class="icon-link">
-                        <i style="font-size: 48px" class="fa fa-file-text  fa-2x w3-hover-opacity w3-row-padding"></i>
-                    </a>
-                    <a href="mailto:richmao@gmail.com" class="icon-link">
-                        <i style="font-size: 48px" class="fa fa-envelope  fa-2x w3-hover-opacity w3-row-padding"></i>
-                    </a>
+        <div class="w3-content w3-row-padding">
+            <div class="w3-half">
+                <div class="w3-center">
+                    <br>
+                    <img src="img/richard.jpg" class="w3-circle w3-image w3-card-4" alt="Photo of Me" width="300"
+                        height="333">
                 </div>
             </div>
-
-        </div>
-        <!--<p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-        <p class="w3-wide">
-            <i class="fa fa-camera"></i>Photography</p>
-        <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-        </div>
-        <p class="w3-wide">
-            <i class="fa fa-laptop"></i>Web Design</p>
-        <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
-        </div>
-        <p class="w3-wide">
-            <i class="fa fa-photo"></i>Photoshop</p>
-        <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-        </div>-->
-    </div>
-
-    <!--<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">14+</span>
-            <br> Partners
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">55+</span>
-            <br> Projects Done
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">89+</span>
-            <br> Happy Clients
-        </div>
-        <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">150+</span>
-            <br> Meetings
+            <div class="w3-half">
+                <div>
+                    <p> Hi! I'm currently a senior at the University of California, Santa Cruz pursuing a Bachelor's Degree of Science in Computer
+                        Science: Computer Game Design with an expected graduation date of December 2018. I have a particular
+                        interest in game development, full stack web development, and artificial intelligence.
+                    <p> Last year, I worked on my senior capstone game, Kleptonaut, as Lead Producer and Programmer. Kleptonaut won
+                        the Grand Prize at the 2018 Sammy Showcase, an event showcasing all ~26 senior games made at UC Santa Cruz.
+                        This past summer, I am worked at Amazon as a Software Development Engineer Intern for the Prime Content
+                        Management Experience team developing a metrics logging system and a tool to generate custom reports.
+                    <p>For my final quarter, I will be taking a course on the theoretical and practical aspects of distributed systems. 
+                        As a soon-to-be graduate in Decemeber, I am looking for any entry level opportunities available starting in 2019.
+                    
+                    <div class="w3-center w3-padding-16">
+                        <a href="https://github.com/richmao" class="icon-link">
+                            <i style="font-size: 48px" class="fab fa-github fa-2x w3-hover-opacity w3-row-padding"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/richmao" class="icon-link">
+                            <i style="font-size: 48px" class="fab fa-linkedin fa-2x w3-hover-opacity w3-row-padding"></i>
+                        </a>
+                        <a href="https://twitter.com/richmaoo" class="icon-link">
+                            <i style="font-size: 48px" class="fab fa-twitter  fa-2x w3-hover-opacity w3-row-padding"></i>
+                        </a>
+                        <a href="http://bit.ly/2y6SLAD" class="icon-link">
+                            <i style="font-size: 48px" class="fas fa-file-alt  fa-2x w3-hover-opacity w3-row-padding"></i>
+                        </a>
+                        <a href="mailto:richmao@gmail.com" class="icon-link">
+                            <i style="font-size: 48px" class="fa fa-envelope  fa-2x w3-hover-opacity w3-row-padding"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="bgimg-2 w3-display-container w3-opacity-min">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+    <div class="bgimg-2 w3-display-container w3-opacity-min w3-padding-64 w3-card-4" id="experience">
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <div class="w3-panel w3-card-4 w3-white">
+                    <h2 class="w3-text-black w3-padding-16">
+                        <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge"></i>Education</h2>
+                    <div class="w3-container">
+                        <h3>
+                            <b>University of California, Santa Cruz</b>
+                        </h3>
+                        <h6>
+                            <b class="w3-opacity">Santa Cruz, CA</b><br>
+                            <b>B.S. Computer Science: Computer Game Design</b>
+                        </h6>
+                        <h6 class="w3-text-black">
+                            <i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2015 - Dec 2018</h6>
+                        <ul>
+                            <li>Relevant Coursework: Computer Systems/Assembly Language, Data Structures, Abstract Data Types, Web Applications, Game AI,
+                            Procedural Content Generation, Natural Language Processing, Distributed Systems (In Progress).</li>
+                        </ul>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h3>
+                            <b>De Anza College</b>
+                        </h3>
+                        <h6>
+                            <b class="w3-opacity">Cupertino, CA</b>
+                        </h6>
+                        <h6 class="w3-text-black">
+                            <i class="fa fa-calendar fa-fw w3-margin-right"></i> Jun 2014 - Aug 2017</h6>
+                        <ul>
+                            <li>Relevant Coursework: Programming in C++, Network Security, Ethical Hacking.</li>
+                        </ul>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-panel w3-card-4 w3-white w3-margin-bottom">
+                    <h2 class="w3-text-black w3-padding-16">
+                        <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge"></i>Work Experience</h2>
+                    <div class="w3-container">
+                        <h3>
+                            <b>Amazon</b>
+                        </h3>
+                        <h6>
+                            <b class="w3-opacity">Seattle, WA</b><br>
+                            <b>Software Development Engineer Intern</b>
+                        </h6>
+                        <h6>
+                            <i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2018 - Sep 2018
+                            <!-- <span class="w3-tag w3-black w3-round">Current</span> -->
+                        </h6>
+                        <ul>
+                            <li>Worked on the Prime Content Management Experience team to develop internal tools to increase productivity of Prime marketers.</li>
+                            <li>Developed a boilerplate React web application to create custom metrics reports to allow for detailed analysis into tool usage
+                        and aid in maintenance and operations.</li>
+                            <li>Designed a backend system to support reports generation and optimized it for future
+                        expansions and scalability.</li>
+                            <li>Reduced a Elasticsearch database schema size by 80% to improve searchability and to optimize
+                        effectiveness of metrics logging.</li>
+                        </ul>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h3>
+                            <b>iD Tech Camps</b>
+                        </h3>
+                        <h6>
+                            <b class="w3-opacity">Stanford, CA</b>
+                            <br>
+                            <b>Instructor</b>
+                        </h6>
+                        <h6>
+                            <i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2016 - Aug 2016
+                        </h6>
+                        <ul>
+                            <li>Mentored over 60 kids in programming fundamentals over the course of the summer.</li>
+                            <li>Developed a fully customized Java curriculum to streamline teaching core programming concepts.</li>
+                            <li>Created several sample iOS and Android games to teach kids mobile game design.</li>
+                        </ul>
+                        <hr>
+                    </div>
+                </div>
+            </div>  
         </div>
-    </div>-->
+    </div>
+
+    <div class="w3-sand w3-container w3-padding-64 w3-card-4" id="skills">
+        <h2 class="w3-center">SKILLS AND AWARDS</h2>
+        <div class="w3-row-padding w3-center">
+            <div class="w3-quarter w3-padding-16">
+                <div class="w3-card w3-white w3-panel">
+                    <h3><i class="fa fa-code fa-fw w3-margin-right w3-margin-top"></i>Languages</h3>
+                    <ul style="display:inline-block; text-align: left; font-size: 18px;">
+                         <li>Java</li>
+                         <li>Python</li>
+                         <li>Javascript</li>
+                         <li>Typescript</li>
+                         <li>C</li>
+                         <li>C++</li>
+                         <li>C#</li>
+                         <li>HTML</li>
+                         <li>CSS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w3-quarter w3-padding-16">
+                <div class="w3-card w3-white w3-panel">
+                    <h3><i class="fas fa-laptop-code fa-fw w3-margin-right w3-margin-top"></i>Technologies</h3>
+                    <ul style="display:inline-block; text-align: left; font-size: 18px;">
+                        <li>React/Redux</li>
+                        <li>Elasticsearch</li>
+                        <li>Git</li>
+                        <li>Unity3D</li>
+                        <li>Node.js/Express</li>
+                        <li>AWS</li>
+                        <li>Unix</li>
+                        <li>NLTK</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w3-half w3-padding-16">
+                <div class="w3-card w3-white w3-panel">
+                    <h3><i class="fa fa-trophy fa-fw w3-margin-right w3-margin-top"></i>Awards & Recognitions</h3>
+                    <ul style="display:inline-block; text-align: left">
+                        <li><h4>(2018) 1st Place Overall at 2018 Sammy Showcase: Kleptonaut</h4></li>
+                        <li><h4>(2015) First Year Honors Program Participant</h4></li>
+                        <li><h4>(2012) Eagle Scout Rank and Gold Palm</h4></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Container (Portfolio Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <div class="w3-white w3-container w3-padding-64 w3-card-4" id="portfolio">
         <h2 class="w3-center">MY WORK</h2>
         <p class="w3-center"><em>Click on the images for more details.
             <br>Additional projects can be found on my <a href="https://www.github.com/richmao">Github</a>.</em>
         </p>
         <br>
 
-        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+
         <!-- <h4 class="w3-center  w3-padding-32">Current Project</h4>
-        <!-- <div class="w3-row-padding w3-center">
-            <img src="img/klepto.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Kleptonaut is a top-down action puzzle game built in Unity3D made for the year long senior capstone. Roles: Lead Producer, Developer<br><a href='http://www.kleptonautgame.com'>Website</a>">
-        </div>
-        <h4 class="w3-center  w3-padding-32">Previous Projects</h4>-->
         <div class="w3-row-padding w3-center">
-            <div class="w3-col m4">
+            <div class="w3-card-4">
                 <img src="img/klepto.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Kleptonaut is a top-down action puzzle game built in Unity3D made for the year long senior capstone. Roles: Lead Producer, Developer<br><a href='http://www.kleptonautgame.com'>Website</a>">
             </div>
-            <div class="w3-col m4">
-                <img src="img/pcgterrain.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PCGTerrain is a terrain generator that uses Perlin Noise and the xxHash hashing algorithm to create the geography of a pseudo-realistic infinite world.<br><a href='PCGTerrain/'>Website</a>">
+        </div>
+        <h4 class="w3-center w3-padding-32">Previous Projects</h4>-->
+        <div class="w3-row-padding w3-center">
+            <div class="w3-third w3-padding-16">
+                <div class="w3-card-4">
+                    <img src="img/klepto.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Kleptonaut is a top-down action puzzle game built in Unity3D made for the year long senior capstone. Roles: Lead Producer, Developer<br><a href='http://www.kleptonautgame.com'>Website</a>">
+                </div>
             </div>
-
-            <div class="w3-col m4">
-                <img src="img/privacyprotector.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Privacy Protector is a 2D survival arcade game where you play as your mouse protecting your computer from viruses. Role: Lead Developer<br><a href='https://seshelle.itch.io/privacy-protector'>Website</a>">
+            <div class="w3-third w3-padding-16">
+                <div class="w3-card-4">
+                    <img src="img/pcgterrain.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PCGTerrain is a terrain generator that uses Perlin Noise and the xxHash hashing algorithm to create the geography of a pseudo-realistic infinite world.<br><a href='PCGTerrain/'>Website</a>">
+                </div>
+            </div>
+            <div class="w3-third w3-padding-16">
+                <div class="w3-card-4">
+                    <img src="img/privacyprotector.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Privacy Protector is a 2D survival arcade game where you play as your mouse protecting your computer from viruses. Role: Lead Developer<br><a href='https://seshelle.itch.io/privacy-protector'>Website</a>">
+                </div>
             </div>
         </div>
         <div class="w3-row-padding w3-center">
-            <div class="w3-col m4">
-                <img src="img/pcgwebsite.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PCGWebsite is an experimental front-end procedural website generator using Tracery.js grammars and Bootstrap/JQuery. Role: Developer<br><a href='PCGWebsite/'>Website</a>">
+            <div class="w3-third w3-padding-16">
+                <div class="w3-card-4">
+                    <img src="img/pcgwebsite.jpg" style="width:100%; height:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PCGWebsite is an experimental front-end procedural website generator using Tracery.js grammars and Bootstrap/JQuery. Role: Developer<br><a href='PCGWebsite/'>Website</a>">
+                </div>
             </div>
         </div>
     </div>
@@ -190,21 +301,21 @@
     </div>
 
     <!-- Footer -->
-    <footer class="w3-center w3-sand w3-padding-64">
-        <a href="#home" class="w3-button w3-black w3-text-sand">
+    <footer class="w3-center w3-black w3-padding-64 w3-card-4">
+        <a href="#home" class="w3-button w3-light-grey">
             <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <div class="w3-xlarge w3-section">
             <a href="https://github.com/richmao" class="icon-link">
-                <i class="fa fa-github w3-hover-opacity w3-row-padding"></i>
+                <i class="fab fa-github w3-hover-opacity w3-row-padding"></i>
             </a>
             <a href="https://linkedin.com/in/richmao" class="icon-link">
-                <i class="fa fa-linkedin w3-hover-opacity w3-row-padding"></i>
+                <i class="fab fa-linkedin w3-hover-opacity w3-row-padding"></i>
             </a>
             <a href="https://twitter.com/richmaoo" class="icon-link">
-                <i class="fa fa-twitter w3-hover-opacity w3-row-padding"></i>
+                <i class="fab fa-twitter w3-hover-opacity w3-row-padding"></i>
             </a>
             <a href="http://bit.ly/2y6SLAD" class="icon-link">
-                <i class="fa fa-file-text w3-hover-opacity w3-row-padding"></i>
+                <i class="fas fa-file-alt w3-hover-opacity w3-row-padding"></i>
             </a>
             <a href="mailto:richmao@gmail.com" class="icon-link">
                 <i class="fa fa-envelope w3-hover-opacity w3-row-padding"></i>

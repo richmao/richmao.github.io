@@ -36,7 +36,7 @@
     /* Second image (Portfolio) */
 
     .bgimg-2 {
-        background-image: url("/w3images/parallax2.jpg");
+        background-image: url("../img/parallax2.jpg");
         min-height: 400px;
     }
 
